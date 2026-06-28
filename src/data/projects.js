@@ -6,6 +6,7 @@ import portfolio from "../assets/images/oldportfolio.webp";
 
 export const projects = [
   {
+    key : "remote",
     title: "Remote Control",
     featured: true,
     image: remote,
@@ -16,6 +17,7 @@ export const projects = [
   },
 
   {
+    key: "focus6",
     title: "Focus 6",
     image: focus,
     tech: ["PHP","MySQL","JavaScript"],
@@ -25,6 +27,7 @@ export const projects = [
   },
 
   {
+    key: "happy",
     title: "Happy Herbivore",
     image: happy,
     tech:["PHP","JS","Figma"],
@@ -34,6 +37,7 @@ export const projects = [
   },
 
   {
+    key: "portfolio",
     title:"Portfolio v2",
     image:portfolio,
     tech:["HTML","CSS","JavaScript"],
