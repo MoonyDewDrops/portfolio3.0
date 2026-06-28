@@ -442,3 +442,8 @@
     height: 100%;
     object-fit: cover;
   }
+
+  a, a:visited, a:hover, a:active {
+   color: inherit; /* Inherit text color from parent */
+   text-decoration: none; /* Remove underline */
+}

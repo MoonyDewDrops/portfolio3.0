@@ -35,7 +35,7 @@ export default function About({ t }) {
 
                 {/* RIGHT SIDE (portrait placeholder) */}
                 <div className="pf-portrait">
-                    <span>jb.</span>
+                    <img src="../assets/images/profile.png" alt="profile" />
                 </div>
             </div>
         </section>

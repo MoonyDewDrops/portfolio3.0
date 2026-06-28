@@ -34,7 +34,7 @@ export default function Hero({ t }) {
                 </div>
 
                 <span className="pf-photo-label">
-                    {t.hero.photo}
+                    <img src="../assets/images/profile.png" alt="profile" />
                 </span>
             </div>
         </section>
