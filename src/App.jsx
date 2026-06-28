@@ -1,34 +1,44 @@
-import { useState } from "react";
-import { translations } from "./data/translations";
-
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import About from "./components/About";
-import Footer from "./components/Footer";
-
-function App() {
-  const [language, setLanguage] = useState("nl");
-
-  const t = translations[language];
-
+export default function About({ t }) {
   return (
-    <>
-      <Navbar
-        language={language}
-        setLanguage={setLanguage}
-        t={t}
-      />
+    <section className="pf-section" id="about">
+      {/* LABEL */}
+      <p className="pf-section-label">
+        console.log(data);
+        {t.about.label}
+      </p>
 
-      <Hero t={t} />
+      <div className="pf-about">
+        {/* LEFT SIDE */}
+        <div>
+          <h2>{t.about.title}</h2>
 
-      <Projects t={t} />
+          <p>{t.about.p1}</p>
+          <p>{t.about.p2}</p>
 
-      <About t={t} />
+          {/* SKILLS */}
+          <div className="pf-skills">
+            {[
+              "PHP",
+              "Python",
+              "JavaScript",
+              "MySQL",
+              "React",
+              "Next.js",
+              "Figma",
+              "Socket.IO",
+            ].map((skill) => (
+              <span key={skill} className="pf-skill">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
 
-      <Footer t={t} />
-    </>
+        {/* RIGHT SIDE (portrait placeholder) */}
+        <div className="pf-portrait">
+          <span>jb.</span>
+        </div>
+      </div>
+    </section>
   );
 }
-
-export default App;

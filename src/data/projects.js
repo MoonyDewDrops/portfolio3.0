@@ -1,4 +1,3 @@
-import annex from "../assets/images/annexbios.webp";
 import focus from "../assets/images/focus6.webp";
 import remote from "../assets/images/remotecontrol.webp";
 import happy from "../assets/images/happyherbivore.webp";
