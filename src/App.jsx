@@ -22,7 +22,11 @@ function App() {
 
       <Hero t={t} />
 
+      <hr className="pf-section-divider" />
+
       <Projects t={t} />
+
+      <hr className="pf-section-divider" />
 
       <About t={t} />
 
