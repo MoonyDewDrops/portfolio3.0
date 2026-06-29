@@ -1,3 +1,5 @@
+import profilePhoto from "../assets/images/profile.png";
+
 export default function About({ t }) {
     return (
         <section className="pf-section" id="about">
@@ -33,9 +35,8 @@ export default function About({ t }) {
                     </div>
                 </div>
 
-                {/* RIGHT SIDE (portrait placeholder) */}
                 <div className="pf-portrait">
-                    <img src="../assets/images/profile.png" alt="profile" />
+                    <img src={profilePhoto} alt="Julia Brouwer" />
                 </div>
             </div>
         </section>

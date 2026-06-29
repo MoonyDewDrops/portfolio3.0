@@ -8,7 +8,9 @@ export const translations = {
 
         hero: {
             eyebrow: "Web developer · Utrecht, NL",
-            title: "Creatieve <em>Backend</em> Developer.",
+            title1: "Creatieve",
+            title2: "Backend",
+            title3: "Developer.",
             subtitle:
                 "Ik bouw dingen die goed werken én er goed uitzien, van schone logica tot doordacht design.",
             ctaWork: "Bekijk mijn werk",
@@ -63,7 +65,9 @@ export const translations = {
 
         hero: {
             eyebrow: "Web developer · Utrecht, NL",
-            title: "Creative <em>Backend</em> Developer.",
+            title1: "Creative",
+            title2: "Backend",
+            title3: "Developer.",
             subtitle:
                 "I build things that work well and look great, from clean logic to thoughtful design.",
             ctaWork: "View my work",

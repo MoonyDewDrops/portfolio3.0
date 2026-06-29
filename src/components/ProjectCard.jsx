@@ -22,7 +22,12 @@ export default function ProjectCard({ project, t, reverse }) {
                     ))}
                 </div>
 
-                <a href={project.demo} target="_blank" rel="noreferrer">
+                <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="pf-card-link"
+                >
                     {t.projects.view}
                 </a>
             </div>
