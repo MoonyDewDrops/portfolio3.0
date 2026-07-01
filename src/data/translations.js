@@ -95,7 +95,8 @@ export const translations = {
                 "Outside of coding, I enjoy design, writing, and video editing.",
             skillsLabel: "Skills",
             cvButton: "View CV",
-            cvLink: cvEn,
+            //currently english cv doesnt work, so i'll just link to the dutch one for now
+            cvLink: cvNl,
         },
 
         footer: {
