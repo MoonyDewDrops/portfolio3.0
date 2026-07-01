@@ -2,6 +2,7 @@ import profilePhoto from "../assets/images/profile.png";
 
 export default function About({ t }) {
     return (
+        
         <section className="pf-section" id="about">
             {/* LABEL */}
             <p className="pf-section-label">
@@ -32,6 +33,10 @@ export default function About({ t }) {
                                 {skill}
                             </span>
                         ))}
+                    </div>
+
+                    <div className="pf-cv-button">
+                        <a href={t.about.cvLink} target="_blank" rel="noreferrer" className="pf-btn pf-btn-fill"> {t.about.cvButton} </a>
                     </div>
                 </div>
 

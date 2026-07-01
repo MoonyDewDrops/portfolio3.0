@@ -1,3 +1,6 @@
+import cvEn from "../assets/cv/CVen.pdf";
+import cvNl from "../assets/cv/CVnl.pdf";
+
 export const translations = {
     nl: {
         nav: {
@@ -32,6 +35,8 @@ export const translations = {
             p2:
                 "Buiten code om ben ik bezig met design, schrijven en video editing.",
             skillsLabel: "Skills",
+            cvButton: "Bekijk CV",
+            cvLink: cvNl,
         },
 
         footer: {
@@ -89,6 +94,8 @@ export const translations = {
             p2:
                 "Outside of coding, I enjoy design, writing, and video editing.",
             skillsLabel: "Skills",
+            cvButton: "View CV",
+            cvLink: cvEn,
         },
 
         footer: {
