@@ -14,6 +14,7 @@
     background: #F7F5FF;
     color: #2D2A3E;
     margin: 0;
+    cursor: none;
   }
 
   hr {
@@ -64,16 +65,32 @@
     gap: 2rem;
   }
 
+  /* Animated underline for the links */
+  .pf-nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 1px;
+    background: #7B6FCD;
+    transition: width .35s ease;
+  }
+
   .pf-nav-links a,
   .pf-nav-links a:visited {
     font-size: 13px;
     color: #7B6FCD;
     letter-spacing: 0.04em;
-    cursor: pointer;
+    position: relative;
   }
 
   .pf-nav-links a:hover {
     color: #2D2A3E;
+  }
+
+  .pf-nav-links a:hover::after {
+    width: 100%;
   }
 
   .lang-toggle {
@@ -86,7 +103,6 @@
 
   .lang-btn {
     padding: 4px 12px;
-    cursor: pointer;
     color: #7B6FCD;
     background: transparent;
     letter-spacing: 0.06em;
@@ -102,10 +118,15 @@
 
   .pf-hero {
     padding: 5rem 2.5rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 260px;
-    gap: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 7.5rem;
+  }
+
+  .pf-hero-content {
+    max-width: 480px;
   }
 
   .pf-eyebrow {
@@ -117,6 +138,7 @@
     margin-bottom: 1.25rem;
   }
 
+  /* Typing animation for headline */
   .pf-name {
     font-family: 'DM Serif Display', serif;
     font-size: 56px;
@@ -124,6 +146,21 @@
     color: #2D2A3E;
     margin: 0 0 0.15em;
     letter-spacing: -0.02em;
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+      typing 1.5s steps(25),
+      blink .8s step-end;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
   }
 
   .pf-name em {
@@ -155,20 +192,34 @@
     color: #7B6FCD;
     font-weight: 400;
     background: transparent;
-    cursor: pointer;
+    transition: all .3s ease;
+  }
+
+  .pf-btn:hover {
+    background: #7B6FCD;
+    color: white;
+    transform: translateY(-2px);
   }
 
   .pf-btn-fill,
   .pf-btn-fill:visited {
     background: #7B6FCD;
     color: #F7F5FF;
+    transition: all .3s ease;
+  }
+
+  .pf-btn-fill:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 10px 30px rgba(123, 111, 205, .25);
   }
 
   .pf-hero-photo {
     background: #E8E4FF;
     border-radius: 16px;
     border: 0.5px solid #C5BAF5;
+    width: 260px;
     height: 320px;
+    flex-shrink: 0;
     position: relative;
     overflow: hidden;
   }
@@ -219,6 +270,7 @@
     margin-bottom: 2.5rem;
   }
 
+
   .pf-projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -230,6 +282,17 @@
     border: 0.5px solid #C5BAF5;
     border-radius: 12px;
     padding: 1.5rem;
+    transition:
+      transform .35s ease,
+      box-shadow .35s ease,
+      border-color .35s ease;
+    cursor: none;
+  }
+
+  .pf-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(123, 111, 205, .12);
+    border-color: #7B6FCD;
   }
 
   .pf-card-tag {
@@ -262,8 +325,25 @@
     font-size: 12px;
     color: #D4B8C7;
     letter-spacing: 0.04em;
+    position: relative;
   }
 
+  .pf-card-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 1px;
+    background: #7B6FCD;
+    transition: width .35s ease;
+  }
+
+  .pf-card-link:hover::after {
+    width: 100%;
+  }
+
+  /* Unique styling for my special projects or which I'm particularly proud of */
   .pf-featured {
     grid-column: 1 / -1;
     background: #2D2A3E;
@@ -389,7 +469,7 @@
     padding: 2rem 2.5rem;
     border-top: 0.5px solid #C5BAF5;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
 
@@ -398,19 +478,44 @@
     color: #C5BAF5;
   }
 
-  .pf-footer-links {
+  .pf-contact-intro {
+    font-size: 15px;
+    color: #6B6880;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .pf-contact-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
   }
 
-  .pf-footer-links a,
-  .pf-footer-links a:visited {
-    font-size: 12px;
+  .pf-contact-links a,
+  .pf-contact-links a:visited {
+    font-size: 13px;
     color: #7B6FCD;
+    position: relative;
   }
 
-  .pf-footer-links a:hover {
+  .pf-contact-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 1px;
+    background: #7B6FCD;
+    transition: width .35s ease;
+  }
+
+  .pf-contact-links a:hover {
     color: #2D2A3E;
+  }
+
+  .pf-contact-links a:hover::after {
+    width: 100%;
   }
 
   .hidden {
@@ -430,6 +535,7 @@
 
   .pf-project-text {
     flex: 1;
+    align-self: flex-start;
   }
 
   .pf-featured-img {
@@ -447,50 +553,152 @@
 
   a {
     text-decoration: none;
+    cursor: none;
   }
 
   .lightbox-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.85);
+    background: rgba(0, 0, 0, .85);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-}
+    z-index: 9998;
+  }
 
-.lightbox-image {
+  .lightbox-image {
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 12px;
-}
+    position: relative;
+    z-index: 1;
+  }
 
-.lightbox-close {
+  .lightbox-close {
     position: absolute;
     top: 20px;
     right: 20px;
     font-size: 2rem;
-    cursor: pointer;
     color: white;
     background: none;
     border: none;
-}
+    z-index: 2;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+  }
 
-.pf-cv-button {
+  .pf-cv-button {
     display: inline-block;
     padding: 0.6rem 0rem;
     font-size: 13px;
     color: #7B6FCD;
     font-weight: 400;
     background: transparent;
-    cursor: pointer;
-}
+  }
 
+  .pf-pill,
+  .pf-skill {
+    transition: .3s;
+  }
+
+  .pf-pill:hover,
+  .pf-skill:hover {
+    background: #7B6FCD;
+    color: white;
+    transform: scale(1.08);
+  }
+
+  button {
+    cursor: none;
+  }
+
+  /* custom cursor */
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+    z-index: 10000;
+
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background: #7B6FCD;
+    border-radius: 50%;
+
+    transition:
+      transform 0.15s ease,
+      opacity 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .cursor-ring {
+    width: 38px;
+    height: 38px;
+
+    border: 2px solid #7B6FCD;
+    border-radius: 50%;
+
+    transition:
+      width .25s ease,
+      height .25s ease,
+      border-color .25s ease,
+      background .25s ease;
+  }
+
+  .cursor-ring.active {
+    width: 60px;
+    height: 60px;
+
+    background: rgba(255, 255, 255, .08);
+    border-color: #7B6FCD;
+  }
+
+  .cursor-dot.active {
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+
+  body.lightbox-open .cursor-dot {
+    background: #F7F5FF;
+  }
+
+  body.lightbox-open .cursor-ring {
+    border-color: #F7F5FF;
+  }
+
+  body.lightbox-open .cursor-ring.active {
+    border-color: #C5BAF5;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  /* responsive */
   @media (max-width: 900px) {
+    .pf-project-text {
+      flex: 0;
+    }
+
     .pf-hero {
-      grid-template-columns: 1fr;
       padding: 3rem 1.5rem 2.5rem;
       gap: 2rem;
+    }
+
+    .pf-hero-content {
+      text-align: center;
+    }
+
+    .pf-hero-content .pf-role {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pf-hero-content .pf-cta-row {
+      justify-content: center;
     }
 
     .pf-hero-photo {
@@ -533,8 +741,6 @@
     }
 
     .pf-footer {
-      flex-direction: column;
-      gap: 1rem;
       text-align: center;
     }
   }
@@ -542,11 +748,25 @@
   @media (max-width: 600px) {
     .pf-nav {
       padding: 1rem 1.25rem;
-      font-size: 18px;
     }
 
-    .pf-footer-links {
-      font-size: 18px;
+    .pf-nav-links a,
+    .pf-nav-links a:visited {
+      font-size: 15px;
+    }
+
+    .lang-toggle,
+    .lang-btn {
+      font-size: 13px;
+    }
+
+    .pf-contact-links a,
+    .pf-contact-links a:visited {
+      font-size: 15px;
+    }
+
+    .pf-contact-intro {
+      font-size: 16px;
     }
 
     .pf-nav-right {
@@ -557,8 +777,40 @@
       gap: 1rem;
     }
 
-    .pf-nav-links a {
+    .pf-eyebrow,
+    .pf-section-label,
+    .pf-card-tag {
+      font-size: 13px;
+    }
+
+    .pf-card p {
+      font-size: 15px;
+    }
+
+    .pf-card-link,
+    .pf-card-link:visited {
+      font-size: 14px;
+    }
+
+    .pf-pill {
       font-size: 12px;
+    }
+
+    .pf-btn,
+    .pf-btn:visited {
+      font-size: 15px;
+    }
+
+    .pf-about p {
+      font-size: 16px;
+    }
+
+    .pf-skill {
+      font-size: 14px;
+    }
+
+    .pf-footer p {
+      font-size: 14px;
     }
 
     .pf-name {
@@ -600,11 +852,16 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 0.75rem;
-      font-size: 20px;
     }
 
-    .pf-footer-links {
-    font-size: 20px;
+    .pf-nav-links a,
+    .pf-nav-links a:visited {
+      font-size: 16px;
+    }
+
+    .pf-contact-links a,
+    .pf-contact-links a:visited {
+      font-size: 16px;
     }
 
     .pf-nav-right {
