@@ -3,7 +3,7 @@ import profilePhoto from "../assets/images/profile.png";
 export default function Hero({ t }) {
     return (
         <section className="pf-hero" id="home">
-            <div>
+            <div className="pf-hero-content">
                 <p className="pf-eyebrow">{t.hero.eyebrow}</p>
 
                 <h1 className="pf-name">

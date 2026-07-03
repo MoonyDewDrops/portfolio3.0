@@ -26,16 +26,6 @@ export const projects = [
     },
 
     {
-        key: "happy",
-        title: "Happy Herbivore",
-        image: happy,
-        tech: ["PHP", "JS", "Figma"],
-        description: "Een volledig werkend kiosksysteem voor een fictief plantaardig foodmerk, met verbeterd design, taalwisseling en bonprinting op het testapparaat van school.",
-        github: "https://github.com/MoonyDewDrops/happyherbivore",
-        demo: "https://u240660.gluwebsite.nl/kiosk/",
-    },
-
-    {
         key: "portfolio",
         title: "Portfolio v2",
         image: portfolio,
@@ -43,5 +33,16 @@ export const projects = [
         description: "Mijn oude portfolio, gemaakt met HTML, CSS en JavaScript. Het is een statische website die mijn projecten en vaardigheden laat zien.",
         github: "https://github.com/MoonyDewDrops/portfolio2.0",
         demo: "https://juliabrouwer.onrender.com/home",
-    }
+    },
+
+    {
+        key: "happy",
+        title: "Happy Herbivore",
+        featured: true,
+        image: happy,
+        tech: ["PHP", "JS", "Figma"],
+        description: "Een volledig werkend kiosksysteem voor een fictief plantaardig foodmerk, met verbeterd design, taalwisseling en bonprinting op het testapparaat van school.",
+        github: "https://github.com/MoonyDewDrops/happyherbivore",
+        demo: "https://u240660.gluwebsite.nl/kiosk/",
+    },
 ];

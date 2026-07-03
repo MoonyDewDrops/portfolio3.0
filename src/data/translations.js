@@ -46,6 +46,11 @@ export const translations = {
             email: "Email",
         },
 
+        contact: {
+            label: "Contact",
+            intro: "Hier kun je contact met me opnemen:",
+        },
+
         projectsData: {
             remote:
                 "Een browsergebaseerd spel-lobbiesysteem waar gebruikers multiplayer-sessies kunnen hosten of eraan kunnen deelnemen. Bevat momenteel een reactietijdspel en is gebouwd om later uit te breiden met extra games.",
@@ -104,6 +109,11 @@ export const translations = {
             github: "GitHub",
             linkedin: "LinkedIn",
             email: "Email",
+        },
+
+        contact: {
+            label: "Contact",
+            intro: "This is where you can contact me:",
         },
 
         projectsData: {

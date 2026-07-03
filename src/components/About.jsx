@@ -4,20 +4,17 @@ export default function About({ t }) {
     return (
         
         <section className="pf-section" id="about">
-            {/* LABEL */}
             <p className="pf-section-label">
                 {t.about.label}
             </p>
 
             <div className="pf-about">
-                {/* LEFT SIDE */}
                 <div>
                     <h2>{t.about.title}</h2>
 
                     <p>{t.about.p1}</p>
                     <p>{t.about.p2}</p>
 
-                    {/* SKILLS */}
                     <div className="pf-skills">
                         {[
                             "PHP",

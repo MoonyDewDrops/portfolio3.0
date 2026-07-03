@@ -5,10 +5,6 @@ export default function ProjectCard({ project, t, reverse, onImageClick }) {
                 } ${reverse ? "reverse" : ""}`}
         >
             <div className="pf-project-text">
-                <p className="pf-card-tag">
-                    {project.tech.join(" · ")}
-                </p>
-
                 <h3>{project.title}</h3>
 
                 <p>{t.projectsData?.[project.key] || project.description}</p>
@@ -31,7 +27,6 @@ export default function ProjectCard({ project, t, reverse, onImageClick }) {
                 </a>
             </div>
 
-            {/* IMAGE */}
             <div className="pf-featured-img">
                 <img src={project.image} alt={project.title} className="js-lightbox-trigger" onClick={() => onImageClick(project.image, project.title)}/>
             </div>
